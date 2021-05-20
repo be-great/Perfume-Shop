@@ -13,19 +13,17 @@ export default class Form2 extends Component {
       handleSubmit = event => {
         event.preventDefault();
     
-        const user = {
-          name: this.state.name,
-          username:"well",
-          email : "well@email.com"
-
+        const card = {
+          number: this.state.name,
         };
     
-        axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+        axios.post(`https://60a6a7aab970910017eb21ff.mockapi.io/api/busket/Cards`, { card })
           .then(res => {
             console.log(res);
             console.log(res.data);
           })
       }
+     
      
       render() {
         return (
